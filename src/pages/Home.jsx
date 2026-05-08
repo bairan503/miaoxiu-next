@@ -64,12 +64,12 @@ const Home = ({ onNavigate }) => {
             苗绣竹韵成立于2025年，是一个致力于苗族刺绣文化传承与推广的青年初创团队。我们通过"非遗+科技+环保"的模式，将传统苗绣技艺与现代设计相结合，打造具有市场竞争力的文化产品，带动乡村绣娘增收致富。
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button onClick={() => onNavigate('products')} className="btn-primary inline-flex items-center justify-center space-x-2">
-              <span>探索产品</span>
+            <button onClick={() => onNavigate('culture')} className="btn-primary inline-flex items-center justify-center space-x-2">
+              <span>深入了解</span>
               <ArrowRight className="w-5 h-5" />
             </button>
             <button onClick={() => onNavigate('about')} className="btn-secondary">
-              了解更多
+              探索产品
             </button>
           </div>
         </div>

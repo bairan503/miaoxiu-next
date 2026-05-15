@@ -21,13 +21,9 @@ const Products = ({ onNavigate }) => {
     { id: 3, name: '云纹竹纤维四件套', category: 'bedding', price: 699, originalPrice: 899, rating: 4.7, sales: 345, reviews: 89, desc: '全链路可降解竹纤维材质，减少60%水耗，践行绿色环保理念', image: '/images/pdt3.png' },
     { id: 4, name: '动态光影壁饰', category: 'wall', price: 1599, originalPrice: 1999, rating: 4.9, sales: 78, reviews: 24, desc: '嵌入柔性LED和调光膜技术，实现16种光影模式切换及0-100%无极调光', image: '/images/pdt4.png' },
     { id: 5, name: '模块化AI定制壁饰', category: 'wall', price: 1299, originalPrice: 1599, rating: 4.8, sales: 123, reviews: 36, desc: '支持AI定制图案，模块化设计可自由组合，打造个性化非遗体验空间', image: '/images/pdt5.png' },
-    { id: 6, name: '透光智能窗帘', category: 'curtain', price: 899, originalPrice: 1199, rating: 4.7, sales: 234, reviews: 56, desc: '智能调光技术，苗绣纹样透光设计，兼顾隐私与美学', image: '/images/mxcpx.jpg' },
-    { id: 7, name: '渐变色透光窗帘', category: 'curtain', price: 799, originalPrice: 999, rating: 4.6, sales: 178, reviews: 42, desc: '渐变色彩设计，融合传统纹样与现代审美，营造温馨氛围', image: '/images/mxcpxx.jpg' },
+    { id: 6, name: '透光智能窗帘', category: 'curtain', price: 899, originalPrice: 1199, rating: 4.7, sales: 234, reviews: 56, desc: '智能调光技术，苗绣纹样透光设计，兼顾隐私与美学', image: '/images/pdt5.png' },
+    { id: 7, name: '渐变色透光窗帘', category: 'curtain', price: 799, originalPrice: 999, rating: 4.6, sales: 178, reviews: 42, desc: '渐变色彩设计，融合传统纹样与现代审美，营造温馨氛围', image: '/images/pdt5.png' },
     { id: 8, name: '磁吸苗绣衣柜', category: 'cabinet', price: 2999, originalPrice: 3599, rating: 4.9, sales: 45, reviews: 12, desc: '可更换苗绣面板设计，获得外观设计专利，兼具实用与审美', image: '/images/pdt6.png' },
-    { id: 9, name: '磁吸玄关柜', category: 'cabinet', price: 1899, originalPrice: 2399, rating: 4.8, sales: 67, reviews: 18, desc: '磁吸式面板，支持纹样DIY更换，打造独特入户体验', image: '/images/mxczx.jpg' },
-    { id: 10, name: '磁吸边柜', category: 'cabinet', price: 1299, originalPrice: 1599, rating: 4.7, sales: 89, reviews: 23, desc: '小巧精致，可搭配不同纹样面板，适配多种家居风格', image: '/images/mxcslw.jpg' },
-    { id: 11, name: '苗绣竹制书签', category: 'derivative', price: 69, originalPrice: 89, rating: 4.8, sales: 567, reviews: 134, desc: '精选竹材制作，迷你苗绣纹样，文创收藏佳品', image: '/images/mxcnw.jpg' },
-    { id: 12, name: '苗绣笔记本套装', category: 'derivative', price: 129, originalPrice: 169, rating: 4.6, sales: 345, reviews: 78, desc: '竹纤维纸张，苗绣封面设计，兼具实用与文化价值', image: '/images/mxcmdw.jpg' },
   ]
 
   const getImageUrl = (image) => {

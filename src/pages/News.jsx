@@ -19,17 +19,8 @@ const News = ({ onNavigate }) => {
       excerpt: '省级大创项目完成全部预定目标，获得评审专家高度评价',
       date: '2026-04-13',
       tag: 'project',
-      image: 'university%20project%20completion%20ceremony%20academic%20achievement',
+      image: '/images/news1.jpg',
       views: 1234,
-    },
-    {
-      id: 2,
-      title: '学术论文《基于轻资产联创平台的非遗活化模式研究》完成',
-      excerpt: '论文系统梳理项目理论基础、模式创新与实践经验，为非遗产业化提供理论参考',
-      date: '2026-04-01',
-      tag: 'research',
-      image: 'academic%20research%20paper%20writing%20university%20study',
-      views: 890,
     },
     {
       id: 3,
@@ -37,7 +28,7 @@ const News = ({ onNavigate }) => {
       excerpt: '提交"苗绣衣柜"外观设计专利申请，为项目建立初步技术壁垒',
       date: '2026-03-15',
       tag: 'research',
-      image: 'patent%20application%20intellectual%20property%20design%20protection',
+      image: '/images/mxchdw.jpg',
       views: 654,
     },
     {
@@ -46,17 +37,8 @@ const News = ({ onNavigate }) => {
       excerpt: '集成产品三维展示、AR体验预览、文化故事等模块的官方网站上线运营',
       date: '2026-03-01',
       tag: 'project',
-      image: 'website%20launch%20digital%20platform%20modern%20web%20design',
+      image: '/images/news2.jpg',
       views: 1567,
-    },
-    {
-      id: 5,
-      title: '与贵州民宿酒店达成合作意向',
-      excerpt: '与西江千户苗寨景区2家高端民宿、1家文旅酒店达成"苗绣主题房"合作意向',
-      date: '2026-02-15',
-      tag: 'cooperation',
-      image: 'hotel%20partnership%20agreement%20business%20collaboration%20meeting',
-      views: 1123,
     },
     {
       id: 6,
@@ -64,17 +46,8 @@ const News = ({ onNavigate }) => {
       excerpt: '完成111份有效问卷调研，67.57%受访者对文化科技家居产品表现出购买兴趣',
       date: '2026-01-20',
       tag: 'research',
-      image: 'market%20research%20survey%20analysis%20consumer%20behavior',
+      image: '/images/news3.jpg',
       views: 789,
-    },
-    {
-      id: 7,
-      title: '荣获校级创新创业大赛三等奖',
-      excerpt: '项目在新文科校级创新创业大赛中获得三等奖，形成良好示范效应',
-      date: '2026-01-10',
-      tag: 'award',
-      image: 'competition%20award%20ceremony%20trophy%20achievement',
-      views: 1890,
     },
     {
       id: 8,
@@ -82,7 +55,7 @@ const News = ({ onNavigate }) => {
       excerpt: '完成智能苗绣床品、动态光影壁饰、透光窗帘、磁吸柜体、非遗衍生品五大系列设计',
       date: '2025-12-20',
       tag: 'project',
-      image: 'product%20design%20sketch%20creative%20innovation%20modern',
+      image: '/images/news4.png',
       views: 1456,
     },
     {
@@ -91,10 +64,18 @@ const News = ({ onNavigate }) => {
       excerpt: '确立"重设计、轻生产、重场景、轻门店"的轻资产运营策略',
       date: '2025-11-15',
       tag: 'project',
-      image: 'business%20model%20strategy%20planning%20innovation',
+      image: '/images/mxcpx.jpg',
       views: 987,
     },
   ]
+
+  const getImageUrl = (image) => {
+    if (image.startsWith('/images/')) {
+      return image
+    } else {
+      return `https://neeko-copilot.bytedance.net/api/text2image?prompt=${image}&image_size=landscape_4_3`
+    }
+  }
 
   const filteredNews = activeTag === 'all' 
     ? news 
@@ -134,7 +115,7 @@ const News = ({ onNavigate }) => {
               <div key={item.id} className="bg-soft-gray rounded-card overflow-hidden hover-lift group">
                 <div className="relative h-48 overflow-hidden">
                   <img
-                    src={`https://neeko-copilot.bytedance.net/api/text2image?prompt=${item.image}&image_size=landscape_4_3`}
+                    src={getImageUrl(item.image)}
                     alt={item.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />

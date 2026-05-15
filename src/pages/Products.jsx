@@ -16,14 +16,14 @@ const Products = ({ onNavigate }) => {
   ]
 
   const products = [
-    { id: 1, name: '星河智能温控床品', category: 'bedding', price: 1299, originalPrice: 1599, rating: 4.9, sales: 234, reviews: 68, desc: '将相变材料植入竹纤维面料，实现18-28℃自动温控，99%天然抗菌率', image: '/images/pdt1.jpg' },
-    { id: 2, name: '蝴蝶妈妈AR互动床品', category: 'bedding', price: 999, originalPrice: 1299, rating: 4.8, sales: 189, reviews: 45, desc: '扫描纹样即可触发苗族神话故事动画，让静态苗绣转化为可交互文化载体', image: '/images/pdt2.png' },
-    { id: 3, name: '云纹竹纤维四件套', category: 'bedding', price: 699, originalPrice: 899, rating: 4.7, sales: 345, reviews: 89, desc: '全链路可降解竹纤维材质，减少60%水耗，践行绿色环保理念', image: '/images/pdt3.png' },
-    { id: 4, name: '动态光影壁饰', category: 'wall', price: 1599, originalPrice: 1999, rating: 4.9, sales: 78, reviews: 24, desc: '嵌入柔性LED和调光膜技术，实现16种光影模式切换及0-100%无极调光', image: '/images/pdt4.png' },
-    { id: 5, name: '模块化AI定制壁饰', category: 'wall', price: 1299, originalPrice: 1599, rating: 4.8, sales: 123, reviews: 36, desc: '支持AI定制图案，模块化设计可自由组合，打造个性化非遗体验空间', image: '/images/pdt5.png' },
-    { id: 6, name: '透光智能窗帘', category: 'curtain', price: 899, originalPrice: 1199, rating: 4.7, sales: 234, reviews: 56, desc: '智能调光技术，苗绣纹样透光设计，兼顾隐私与美学', image: '/images/pdt5.png' },
-    { id: 7, name: '渐变色透光窗帘', category: 'curtain', price: 799, originalPrice: 999, rating: 4.6, sales: 178, reviews: 42, desc: '渐变色彩设计，融合传统纹样与现代审美，营造温馨氛围', image: '/images/pdt5.png' },
-    { id: 8, name: '磁吸苗绣衣柜', category: 'cabinet', price: 2999, originalPrice: 3599, rating: 4.9, sales: 45, reviews: 12, desc: '可更换苗绣面板设计，获得外观设计专利，兼具实用与审美', image: '/images/pdt6.png' },
+    { id: 1, name: '星河智能温控床品', category: 'bedding', price: '暂无定价', originalPrice: 1599, rating: 4.9, sales: 234, reviews: 68, desc: '将相变材料植入竹纤维面料，实现18-28℃自动温控，99%天然抗菌率', image: '/images/pdt1.jpg' },
+    { id: 2, name: '蝴蝶妈妈AR互动床品', category: 'bedding', price: '暂无定价', originalPrice: 1299, rating: 4.8, sales: 189, reviews: 45, desc: '扫描纹样即可触发苗族神话故事动画，让静态苗绣转化为可交互文化载体', image: '/images/pdt2.png' },
+    { id: 3, name: '云纹竹纤维四件套', category: 'bedding', price: '暂无定价', originalPrice: 899, rating: 4.7, sales: 345, reviews: 89, desc: '全链路可降解竹纤维材质，减少60%水耗，践行绿色环保理念', image: '/images/pdt3.png' },
+    { id: 4, name: '动态光影壁饰', category: 'wall', price: '暂无定价', originalPrice: 1999, rating: 4.9, sales: 78, reviews: 24, desc: '嵌入柔性LED和调光膜技术，实现16种光影模式切换及0-100%无极调光', image: '/images/pdt4.png' },
+    { id: 5, name: '模块化AI定制壁饰', category: 'wall', price: '暂无定价', originalPrice: 1599, rating: 4.8, sales: 123, reviews: 36, desc: '支持AI定制图案，模块化设计可自由组合，打造个性化非遗体验空间', image: '/images/pdt5.png' },
+    { id: 6, name: '透光智能窗帘', category: 'curtain', price: '暂无定价', originalPrice: 1199, rating: 4.7, sales: 234, reviews: 56, desc: '智能调光技术，苗绣纹样透光设计，兼顾隐私与美学', image: '/images/pdt5.png' },
+    { id: 7, name: '渐变色透光窗帘', category: 'curtain', price: '暂无定价', originalPrice: 999, rating: 4.6, sales: 178, reviews: 42, desc: '渐变色彩设计，融合传统纹样与现代审美，营造温馨氛围', image: '/images/pdt5.png' },
+    { id: 8, name: '磁吸苗绣衣柜', category: 'cabinet', price: '暂无定价', originalPrice: 3599, rating: 4.9, sales: 45, reviews: 12, desc: '可更换苗绣面板设计，获得外观设计专利，兼具实用与审美', image: '/images/pdt6.png' },
   ]
 
   const getImageUrl = (image) => {
@@ -40,8 +40,14 @@ const Products = ({ onNavigate }) => {
 
   const sortedProducts = [...filteredProducts].sort((a, b) => {
     switch (sortBy) {
-      case 'price-low': return a.price - b.price
-      case 'price-high': return b.price - a.price
+      case 'price-low': 
+        if (a.price === '暂无定价') return 1
+        if (b.price === '暂无定价') return -1
+        return a.price - b.price
+      case 'price-high': 
+        if (a.price === '暂无定价') return -1
+        if (b.price === '暂无定价') return 1
+        return b.price - a.price
       case 'rating': return b.rating - a.rating
       default: return b.sales - a.sales
     }
@@ -144,9 +150,11 @@ const Products = ({ onNavigate }) => {
                     alt={product.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute top-3 left-3 bg-cherry text-white text-xs px-2 py-1 rounded-full">
-                    {Math.round((1 - product.price / product.originalPrice) * 100)}% OFF
-                  </div>
+                  {product.price !== '暂无定价' && (
+                    <div className="absolute top-3 left-3 bg-cherry text-white text-xs px-2 py-1 rounded-full">
+                      {Math.round((1 - product.price / product.originalPrice) * 100)}% OFF
+                    </div>
+                  )}
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
                     <button className="bg-white text-meta-blue w-12 h-12 rounded-full flex items-center justify-center hover:bg-meta-blue hover:text-white transition-colors mx-2">
                       <Heart className="w-5 h-5" />
@@ -171,8 +179,14 @@ const Products = ({ onNavigate }) => {
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-baseline gap-2">
-                      <span className="text-xl font-bold text-cherry">¥{product.price}</span>
-                      <span className="text-sm text-slate-gray line-through">¥{product.originalPrice}</span>
+                      {product.price === '暂无定价' ? (
+                        <span className="text-xl font-bold text-cherry">{product.price}</span>
+                      ) : (
+                        <>
+                          <span className="text-xl font-bold text-cherry">¥{product.price}</span>
+                          <span className="text-sm text-slate-gray line-through">¥{product.originalPrice}</span>
+                        </>
+                      )}
                     </div>
                     <button className="text-meta-blue text-sm font-medium hover:text-meta-blue-hover">
                       查看详情

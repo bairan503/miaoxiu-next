@@ -78,8 +78,8 @@ const About = ({ onNavigate }) => {
                 className="w-full h-80 object-cover rounded-card shadow-elevated"
               />
               <div className="absolute -bottom-6 -left-6 bg-meta-blue text-white p-6 rounded-card shadow-elevated">
-                <div className="text-4xl font-bold">500+</div>
-                <div className="text-sm opacity-80">合作绣娘</div>
+                <div className="text-4xl font-bold"> </div>
+                <div className="text-sm opacity-80"> </div>
               </div>
             </div>
           </div>

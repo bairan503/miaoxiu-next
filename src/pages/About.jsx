@@ -2,39 +2,46 @@ import { History, Users, Award, Target, Leaf, Heart, Globe, TrendingUp } from 'l
 
 const About = ({ onNavigate }) => {
   const milestones = [
-    { year: '2018', title: '公司成立', description: '苗绣竹韵正式成立，致力于苗绣文化传承，首批签约绣娘50人' },
-    { year: '2019', title: '非遗认证', description: '获得国家级非物质文化遗产保护单位认证，产品入驻电商平台' },
-    { year: '2020', title: '乡村合作', description: '与50个苗族村寨建立合作关系，带动200户家庭增收' },
-    { year: '2021', title: '电商拓展', description: '入驻各大电商平台，产品远销海内外，年销售额突破1000万' },
-    { year: '2022', title: '技艺培训', description: '开展苗绣技艺培训，培养新一代传承人，累计培训500人次' },
-    { year: '2023', title: '品牌升级', description: '完成品牌升级，推出全新产品线，合作绣娘突破500人' },
+    { year: '2025', title: '项目启动', description: '省级大创项目立项，团队组建完成，开始市场调研' },
+    { year: '2025', title: '产品定义', description: '完成5大系列产品概念设计，涵盖智能床品、壁饰、窗帘、柜体及衍生品' },
+    { year: '2025', title: '模式构建', description: '确立轻资产联创平台模式' },
+    { year: '2026', title: '知识产权', description: '提交外观设计专利申请，完成学术论文撰写' },
+    { year: '2026', title: '平台上线', description: '品牌展示网站上线，集成AR体验预览和产品三维展示' },
+    { year: '2026', title: '成果验收', description: '项目顺利结项，获得新文科创新创业大赛校级铜奖' },
   ]
 
   const team = [
-    { name: '王绣娘', role: '首席非遗传承人', experience: '30年苗绣经验，省级非遗传承人', desc: '自幼跟随祖母学习苗绣，精通平绣、辫绣、打籽绣等多种技法' },
-    { name: '李老师', role: '工艺总监', experience: '15年传统工艺研究', desc: '毕业于中央美术学院，致力于传统工艺与现代设计的融合创新' },
-    { name: '张经理', role: '运营总监', experience: '10年电商运营经验', desc: '曾任职于阿里巴巴，擅长品牌运营和电商渠道拓展' },
-    { name: '陈设计师', role: '首席设计师', experience: '8年服装设计经验', desc: '毕业于北京服装学院，将苗绣元素融入现代时尚设计' },
+    { name: '辛佳慧', role: '项目负责人', experience: '法学专业，统筹管理', desc: '负责项目整体规划、资源协调与时间管理，带领团队完成各项任务' },
+    { name: '解玉姣', role: '品牌设计师', experience: '视觉传达设计', desc: '负责品牌设计和产品外观，将传统苗绣纹样与现代极简风格相融合' },
+    { name: '张含悦', role: '市场调研', experience: '市场营销专业', desc: '负责市场调研和文案撰写，用数据驱动产品定位和定价策略' },
+    { name: '雒佳豪', role: '技术开发', experience: '计算机专业', desc: '负责品牌网站设计搭建，实现产品三维展示和AR体验预览功能' },
   ]
 
   const values = [
-    { icon: Heart, title: '匠心传承', desc: '坚守传统工艺，传承千年技艺，让每一件作品都成为艺术品' },
-    { icon: Users, title: '共同富裕', desc: '带动乡村绣娘增收致富，实现经济效益与社会效益双赢' },
-    { icon: Globe, title: '文化自信', desc: '弘扬民族文化，让苗绣走向世界，展现中华文化魅力' },
-    { icon: Leaf, title: '可持续发展', desc: '注重环保理念，使用天然材料，践行绿色发展' },
+    { icon: Heart, title: '非遗活化', desc: '突破博物馆式保存局限，将传统纹样融入现代家居，打造可居住的非遗博物馆' },
+    { icon: Users, title: '乡村振兴', desc: '与贵州竹产业合作社和苗绣工坊合作，带动竹农和绣娘增收致富' },
+    { icon: Globe, title: '文化创新', desc: '运用AR技术实现文化动态交互，让千年苗绣技艺在当代生活中焕发新生' },
+    { icon: Leaf, title: '绿色环保', desc: '全链路采用可降解竹纤维材料，践行可持续发展理念' },
   ]
 
   return (
     <div className="pt-16">
-      <section className="py-20 bg-gradient-meta text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gradient-meta text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-50">
+          <img
+            src="/images/aboutheader.jpg"
+            alt="苗绣背景"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl font-bold mb-6">关于我们</h1>
             <p className="text-xl text-white/80 mb-6">
-              苗绣竹韵致力于传承和推广苗族刺绣文化，通过传统手工艺助力乡村振兴事业
+              苗绣竹韵家居——非遗活化与轻资产联创平台
             </p>
             <p className="text-white/70">
-              我们是一家青年初创团队，以"传承文化、创造价值、共同富裕"为使命，通过"公司+合作社+绣娘"的运营模式，将传统苗绣技艺与现代设计相结合，打造具有市场竞争力的文化产品。
+              我们是一支由大学生组成的创业团队，致力于将贵州苗绣非遗技艺与现代智能家居相结合。通过"非遗+科技+环保"的创新模式，打造具有文化内涵与实用功能的家居产品，助力乡村振兴。
             </p>
           </div>
         </div>
@@ -51,22 +58,22 @@ const About = ({ onNavigate }) => {
               <h2 className="text-3xl font-bold text-dark-charcoal mb-6">我们的故事</h2>
               <div className="space-y-4 text-slate-gray">
                 <p>
-                  苗绣竹韵诞生于贵州黔东南的苗族村寨，这里是苗族刺绣文化的发源地。我们的创始人王绣娘，自幼跟随祖母学习苗绣技艺，深知这门传统工艺的珍贵价值。
+                  苗绣竹韵家居项目源于贵州国家级非遗苗绣，针对非遗传承断层、乡村经济薄弱、智能家居产品同质化等社会痛点，提出非遗传承、环保创新与体验经济相结合的系统性解决方案。
                 </p>
                 <p>
-                  2018年，王绣娘联合几位志同道合的传承人，创立了苗绣竹韵。我们的使命是让更多人了解和喜爱苗绣文化，同时通过产业化发展，帮助乡村绣娘实现增收致富。
+                  项目团队由法学、设计、营销、计算机等多专业大学生组成，在郝少英、石红溶两位导师指导下，完成了市场调研、产品设计、模式构建到平台搭建的全流程实践。
                 </p>
                 <p>
-                  多年来，我们坚持传统手工制作，每一件产品都凝聚着匠人的心血。我们与500多位绣娘建立了长期合作，覆盖贵州、湖南、云南等多个苗族聚居地。
+                  我们的核心创新在于构建轻资产联创平台，整合非遗传承人、高校设计团队、技术企业和场景渠道，形成"设计+技术+渠道"的商业闭环。
                 </p>
                 <p>
-                  我们的产品远销海内外，曾作为国礼赠送给外国友人，也多次在国际文化展览中获奖。苗绣竹韵正在成为传播中华文化的一张亮丽名片。
+                  项目获得省级大学生创新训练计划立项支持，完成学术论文1篇、专利申请1项、5大系列产品设计，并自主开发品牌展示网站。
                 </p>
               </div>
             </div>
             <div className="relative">
               <img
-                src="https://neeko-copilot.bytedance.net/api/text2image?prompt=elderly%20chinese%20miao%20woman%20doing%20traditional%20embroidery%20craftwork%20cultural%20heritage&image_size=portrait_4_3"
+                src="/images/about1.png"
                 alt="苗绣传承"
                 className="w-full h-80 object-cover rounded-card shadow-elevated"
               />
@@ -106,28 +113,6 @@ const About = ({ onNavigate }) => {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-dark-charcoal mb-4">核心团队</h2>
-            <p className="text-slate-gray">专业团队，守护非遗传承</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {team.map((member, index) => (
-              <div key={index} className="bg-soft-gray rounded-card p-6 hover-lift">
-                <div className="w-20 h-20 bg-meta-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-10 h-10 text-meta-blue" />
-                </div>
-                <h3 className="text-lg font-semibold text-dark-charcoal mb-1 text-center">{member.name}</h3>
-                <div className="text-meta-blue font-medium mb-2 text-center text-sm">{member.role}</div>
-                <div className="text-slate-gray text-sm mb-2 text-center">{member.experience}</div>
-                <p className="text-slate-gray text-xs text-center">{member.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="py-20 bg-soft-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -160,7 +145,7 @@ const About = ({ onNavigate }) => {
               </div>
               <h3 className="text-xl font-semibold text-dark-charcoal mb-4">使命</h3>
               <p className="text-slate-gray">
-                传承苗族刺绣文化，保护非物质文化遗产，通过产业化发展助力乡村振兴，让传统手工艺在现代社会焕发新生。我们致力于打造一个连接传统与现代、城市与乡村的文化桥梁。
+                突破苗绣博物馆式保存局限，将传统纹样融入智能床品、窗帘、壁饰等现代家居产品，借助AR技术实现文化动态交互，打造可居住的非遗博物馆，带动乡村绣娘增收致富。
               </p>
             </div>
             <div className="bg-soft-gray rounded-card p-8">
@@ -169,7 +154,7 @@ const About = ({ onNavigate }) => {
               </div>
               <h3 className="text-xl font-semibold text-dark-charcoal mb-4">愿景</h3>
               <p className="text-slate-gray">
-                成为中国最具影响力的非遗文化品牌，让苗绣技艺走向世界，为乡村振兴贡献力量，实现文化传承与经济发展的双赢。我们希望让每一位绣娘都能通过自己的双手创造美好生活。
+                构建轻资产联创平台，成为非遗活化的典范案例。通过"非遗+科技+环保"模式，实现文化传承与经济发展的双赢，为乡村振兴贡献青年力量。
               </p>
             </div>
           </div>

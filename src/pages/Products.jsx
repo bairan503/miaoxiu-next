@@ -8,26 +8,35 @@ const Products = ({ onNavigate }) => {
 
   const categories = [
     { id: 'all', name: '全部', count: 12 },
-    { id: 'clothing', name: '服饰', count: 4 },
-    { id: 'accessories', name: '配饰', count: 5 },
-    { id: 'home', name: '家居', count: 2 },
-    { id: 'gift', name: '礼品', count: 1 },
+    { id: 'bedding', name: '智能床品', count: 3 },
+    { id: 'wall', name: '光影壁饰', count: 2 },
+    { id: 'curtain', name: '透光窗帘', count: 2 },
+    { id: 'cabinet', name: '柜体系统', count: 3 },
+    { id: 'derivative', name: '非遗衍生品', count: 2 },
   ]
 
   const products = [
-    { id: 1, name: '苗绣手工披肩', category: 'accessories', price: 599, originalPrice: 799, rating: 4.9, sales: 328, reviews: 86, desc: '纯手工刺绣，传统蝴蝶纹样，适合各种场合佩戴', image: 'miao%20embroidery%20handmade%20shawl%20traditional%20chinese%20craft%20elegant' },
-    { id: 2, name: '苗族银饰套装', category: 'accessories', price: 1299, originalPrice: 1599, rating: 4.8, sales: 156, reviews: 42, desc: '传统苗族银饰工艺，精美雕刻，收藏送礼佳品', image: 'miao%20silver%20jewelry%20set%20traditional%20chinese%20ethnic%20accessories' },
-    { id: 3, name: '苗绣旗袍', category: 'clothing', price: 1999, originalPrice: 2599, rating: 5.0, sales: 89, reviews: 28, desc: '东方韵味，匠心之作，传统苗绣与现代旗袍完美融合', image: 'miao%20embroidery%20qipao%20traditional%20chinese%20dress%20elegant' },
-    { id: 4, name: '苗绣抱枕', category: 'home', price: 299, originalPrice: 399, rating: 4.7, sales: 512, reviews: 156, desc: '精美苗绣图案，舒适面料，家居装饰首选', image: 'miao%20embroidery%20pillow%20home%20decor%20traditional%20craft' },
-    { id: 5, name: '苗绣手提包', category: 'accessories', price: 459, originalPrice: 599, rating: 4.8, sales: 234, reviews: 68, desc: '时尚与传统完美融合，日常百搭款式', image: 'miao%20embroidery%20handbag%20traditional%20chinese%20craft%20bag' },
-    { id: 6, name: '苗绣围巾', category: 'accessories', price: 399, originalPrice: 499, rating: 4.6, sales: 456, reviews: 128, desc: '柔软舒适，保暖性强，传统纹样设计', image: 'miao%20embroidery%20scarf%20traditional%20chinese%20craft%20warm' },
-    { id: 7, name: '苗绣挂画', category: 'home', price: 899, originalPrice: 1199, rating: 4.9, sales: 78, reviews: 24, desc: '纯手工刺绣艺术挂画，极具收藏价值', image: 'miao%20embroidery%20wall%20art%20traditional%20chinese%20painting' },
-    { id: 8, name: '苗绣礼品盒', category: 'gift', price: 699, originalPrice: 899, rating: 4.8, sales: 167, reviews: 52, desc: '精美包装，内含多件苗绣精品，送礼首选', image: 'miao%20embroidery%20gift%20box%20traditional%20chinese%20craft%20packaging' },
-    { id: 9, name: '苗绣连衣裙', category: 'clothing', price: 899, originalPrice: 1199, rating: 4.7, sales: 198, reviews: 56, desc: '优雅大方，苗绣元素点缀，展现东方美', image: 'miao%20embroidery%20dress%20traditional%20chinese%20fashion' },
-    { id: 10, name: '苗绣发簪', category: 'accessories', price: 199, originalPrice: 259, rating: 4.5, sales: 678, reviews: 189, desc: '精致银饰与苗绣结合，古典优雅', image: 'miao%20embroidery%20hairpin%20traditional%20chinese%20accessory' },
-    { id: 11, name: '苗绣外套', category: 'clothing', price: 1599, originalPrice: 1999, rating: 4.9, sales: 67, reviews: 18, desc: '冬季保暖，苗绣装饰，时尚与传统兼具', image: 'miao%20embroidery%20jacket%20traditional%20chinese%20clothing' },
-    { id: 12, name: '苗绣T恤', category: 'clothing', price: 299, originalPrice: 399, rating: 4.6, sales: 456, reviews: 134, desc: '休闲舒适，苗绣图案点缀，日常百搭', image: 'miao%20embroidery%20tshirt%20traditional%20chinese%20casual' },
+    { id: 1, name: '星河智能温控床品', category: 'bedding', price: 1299, originalPrice: 1599, rating: 4.9, sales: 234, reviews: 68, desc: '将相变材料植入竹纤维面料，实现18-28℃自动温控，99%天然抗菌率', image: '/images/pdt1.jpg' },
+    { id: 2, name: '蝴蝶妈妈AR互动床品', category: 'bedding', price: 999, originalPrice: 1299, rating: 4.8, sales: 189, reviews: 45, desc: '扫描纹样即可触发苗族神话故事动画，让静态苗绣转化为可交互文化载体', image: '/images/pdt2.png' },
+    { id: 3, name: '云纹竹纤维四件套', category: 'bedding', price: 699, originalPrice: 899, rating: 4.7, sales: 345, reviews: 89, desc: '全链路可降解竹纤维材质，减少60%水耗，践行绿色环保理念', image: '/images/pdt3.png' },
+    { id: 4, name: '动态光影壁饰', category: 'wall', price: 1599, originalPrice: 1999, rating: 4.9, sales: 78, reviews: 24, desc: '嵌入柔性LED和调光膜技术，实现16种光影模式切换及0-100%无极调光', image: '/images/pdt4.png' },
+    { id: 5, name: '模块化AI定制壁饰', category: 'wall', price: 1299, originalPrice: 1599, rating: 4.8, sales: 123, reviews: 36, desc: '支持AI定制图案，模块化设计可自由组合，打造个性化非遗体验空间', image: '/images/pdt5.png' },
+    { id: 6, name: '透光智能窗帘', category: 'curtain', price: 899, originalPrice: 1199, rating: 4.7, sales: 234, reviews: 56, desc: '智能调光技术，苗绣纹样透光设计，兼顾隐私与美学', image: '/images/mxcpx.jpg' },
+    { id: 7, name: '渐变色透光窗帘', category: 'curtain', price: 799, originalPrice: 999, rating: 4.6, sales: 178, reviews: 42, desc: '渐变色彩设计，融合传统纹样与现代审美，营造温馨氛围', image: '/images/mxcpxx.jpg' },
+    { id: 8, name: '磁吸苗绣衣柜', category: 'cabinet', price: 2999, originalPrice: 3599, rating: 4.9, sales: 45, reviews: 12, desc: '可更换苗绣面板设计，获得外观设计专利，兼具实用与审美', image: '/images/pdt6.png' },
+    { id: 9, name: '磁吸玄关柜', category: 'cabinet', price: 1899, originalPrice: 2399, rating: 4.8, sales: 67, reviews: 18, desc: '磁吸式面板，支持纹样DIY更换，打造独特入户体验', image: '/images/mxczx.jpg' },
+    { id: 10, name: '磁吸边柜', category: 'cabinet', price: 1299, originalPrice: 1599, rating: 4.7, sales: 89, reviews: 23, desc: '小巧精致，可搭配不同纹样面板，适配多种家居风格', image: '/images/mxcslw.jpg' },
+    { id: 11, name: '苗绣竹制书签', category: 'derivative', price: 69, originalPrice: 89, rating: 4.8, sales: 567, reviews: 134, desc: '精选竹材制作，迷你苗绣纹样，文创收藏佳品', image: '/images/mxcnw.jpg' },
+    { id: 12, name: '苗绣笔记本套装', category: 'derivative', price: 129, originalPrice: 169, rating: 4.6, sales: 345, reviews: 78, desc: '竹纤维纸张，苗绣封面设计，兼具实用与文化价值', image: '/images/mxcmdw.jpg' },
   ]
+
+  const getImageUrl = (image) => {
+    if (image.startsWith('/images/')) {
+      return image
+    } else {
+      return `https://neeko-copilot.bytedance.net/api/text2image?prompt=${image}&image_size=square`
+    }
+  }
 
   const filteredProducts = activeCategory === 'all' 
     ? products 
@@ -43,8 +52,8 @@ const Products = ({ onNavigate }) => {
   })
 
   const services = [
-    { icon: Truck, title: '全国包邮', desc: '满199元免运费' },
     { icon: Shield, title: '正品保障', desc: '100%手工正品' },
+    { icon: Truck, title: '全国包邮', desc: '满199元免运费' },
     { icon: RotateCcw, title: '七天退换', desc: '不满意可退换' },
     { icon: Package, title: '精美包装', desc: '礼盒包装赠送' },
   ]
@@ -54,10 +63,10 @@ const Products = ({ onNavigate }) => {
       <section className="py-20 bg-gradient-meta text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl font-bold mb-4">产品展示</h1>
-            <p className="text-xl text-white/80 mb-4">精选苗绣工艺，传承民族文化</p>
+            <h1 className="text-4xl font-bold mb-4">星河系列产品</h1>
+            <p className="text-xl text-white/80 mb-4">非遗活化 · 智能科技 · 绿色环保</p>
             <p className="text-white/60 max-w-2xl mx-auto">
-              每一件苗绣作品都凝聚着绣娘的心血与智慧，从设计到成品历经数十道工序，确保每一件产品都是精品。我们承诺所有产品均为纯手工制作，传承千年苗绣技艺。
+              苗绣竹韵星河系列产品，将贵州苗绣非遗技艺与现代智能家居深度融合。运用相变材料、AR技术、可降解竹纤维等创新科技，打造兼具文化内涵与实用功能的家居体验。
             </p>
           </div>
         </div>
@@ -135,7 +144,7 @@ const Products = ({ onNavigate }) => {
               <div key={product.id} className={`bg-soft-gray rounded-card overflow-hidden hover-lift group ${viewMode === 'list' ? 'flex' : ''}`}>
                 <div className={`relative overflow-hidden ${viewMode === 'list' ? 'w-48 h-48 flex-shrink-0' : 'aspect-square'}`}>
                   <img
-                    src={`https://neeko-copilot.bytedance.net/api/text2image?prompt=${product.image}&image_size=square`}
+                    src={getImageUrl(product.image)}
                     alt={product.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -191,35 +200,35 @@ const Products = ({ onNavigate }) => {
           <div className="bg-white rounded-card p-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-2xl font-bold text-dark-charcoal mb-4">定制服务</h3>
+                <h3 className="text-2xl font-bold text-dark-charcoal mb-4">纹样共创平台</h3>
                 <p className="text-slate-gray mb-4">
-                  我们提供个性化定制服务，根据您的需求定制专属苗绣作品。无论是婚礼礼服、企业礼品还是艺术收藏，我们都能为您量身打造。
+                  我们搭建"纹样数字版权库"和DIY设计平台，允许用户参与纹样再创作，您的设计方案一经采纳即可获得销售分成。
                 </p>
                 <ul className="space-y-2 text-slate-gray mb-6">
                   <li className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-meta-blue rounded-full"></div>
-                    <span>专业设计师一对一沟通</span>
+                    <span>纹样数字版权库开放使用</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-meta-blue rounded-full"></div>
-                    <span>传统纹样与现代设计融合</span>
+                    <span>用户参与纹样再创作</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-meta-blue rounded-full"></div>
-                    <span>资深绣娘手工制作</span>
+                    <span>设计采纳可获销售分成</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-meta-blue rounded-full"></div>
-                    <span>品质保证，售后无忧</span>
+                    <span>构建用户参与式开放生态</span>
                   </li>
                 </ul>
                 <button onClick={() => onNavigate('contact')} className="btn-primary">
-                  联系定制
+                  参与共创
                 </button>
               </div>
               <div className="relative">
                 <img
-                  src="https://neeko-copilot.bytedance.net/api/text2image?prompt=custom%20made%20miao%20embroidery%20service%20traditional%20chinese%20craft&image_size=landscape_4_3"
+                  src="/images/prudoctbottom.jpg"
                   alt="定制服务"
                   className="w-full h-64 object-cover rounded-card"
                 />
